@@ -1,4 +1,7 @@
 <?php
+$baseURL = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['SCRIPT_NAME']);
+?>
+<?php
 // Database configuration
 $host = 'localhost';
 $dbname = 'blog';
@@ -45,9 +48,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <?php echo '<br>'; ?>
-    <?php echo '<a href="http://localhost/2/list_edit_posts.php">Edit a posts</a><br>'; ?>
-    <?php echo '<a href="http://localhost/2/view_posts.php">View all posts</a><br>'; ?>
-    <?php echo '<a href="http://localhost/2/index.php">Add a new posts</a>'; ?><br>
+        <a href="<?php echo $baseURL; ?>/list_edit_posts.php">Edit a posts</a>
+        <a href="<?php echo $baseURL; ?>/view_posts.php">View all posts</a>
+        <a href="<?php echo $baseURL; ?>/index.php">Add a new posts</a>
     <h1>Search Blog Posts</h1>
     <form method="post">
         <label for="search_field">Search By:</label>

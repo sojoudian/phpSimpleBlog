@@ -1,4 +1,8 @@
 <?php
+$baseURL = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['SCRIPT_NAME']);
+?>
+
+<?php
 // Database configuration
 $host = '127.0.0.1';
 $dbname = 'blog';
@@ -33,9 +37,9 @@ try {
     </header>
 
     <nav>
-        <a href="http://localhost/2/search.php">Search for a post</a>
-        <a href="http://localhost/2/list_edit_posts.php">Edit a post</a>
-        <a href="http://localhost/2/index.php">Add a new post</a>
+        <a href="<?php echo $baseURL; ?>/search.php">Search for a post</a>
+        <a href="<?php echo $baseURL; ?>/list_edit_posts.php">Edit a post</a>
+        <a href="<?php echo $baseURL; ?>/index.php">Add a new post</a>
     </nav>
 
     <main>
