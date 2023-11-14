@@ -1,4 +1,8 @@
 <?php
+$baseURL = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['SCRIPT_NAME']);
+?>
+
+<?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $title = htmlspecialchars($_POST['title']);
@@ -31,8 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         echo "Post created successfully.";
         echo '<br>';
-        echo '<a href="http://localhost/2/view_posts.php">View all posts</a><br>';
-        echo '<a href="http://localhost/2/index.php">Add a new posts</a><br>';
+        echo '<a href="' . $baseURL . '/view_posts.php">View all posts</a><br>';
+        echo '<a href="' . $baseURL . '/index.php">Add a new posts</a><br>';
         
     } catch(PDOException $e) {
         die("ERROR: Could not able to execute $sql. " . $e->getMessage());
@@ -81,9 +85,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <?php echo '<br>'; ?>
-    <?php echo '<a href="http://localhost/2/list_edit_posts.php">Edit a posts</a><br>'; ?>
-    <?php echo '<a href="http://localhost/2/view_posts.php">View all posts</a><br>'; ?>
-    <?php echo '<a href="http://localhost/2/search.php">Search for a posts</a><br>'; ?>
+    <a href="<?php echo $baseURL; ?>/list_edit_posts.php">Edit a posts</a><br>
+    <a href="<?php echo $baseURL; ?>/view_posts.php">View all posts</a><br>
+    <a href="<?php echo $baseURL; ?>/search.php">Search for a posts</a><br>
     <H1>Add a new post</H1>
     <form method="post">
         <label for="title">Title:</label>
