@@ -37,9 +37,9 @@ try {
     </header>
 
     <nav>
-        <a href="<?php echo $baseURL; ?>/search.php">Search for a post</a>
-        <a href="<?php echo $baseURL; ?>/list_edit_posts.php">Edit a post</a>
-        <a href="<?php echo $baseURL; ?>/index.php">Add a new post</a>
+        <a href="<?php echo $baseURL; ?>search.php">Search for a post</a>
+        <a href="<?php echo $baseURL; ?>list_edit_posts.php">Edit a post</a>
+        <a href="<?php echo $baseURL; ?>index.php">Add a new post</a>
     </nav>
 
     <main>

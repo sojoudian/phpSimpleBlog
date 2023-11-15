@@ -67,9 +67,9 @@ if (isset($_GET['edit'])) {
     </header>
 
     <nav>
-        <a href="<?php echo $baseURL; ?>/view_posts.php">View all posts</a>
-        <a href="<?php echo $baseURL; ?>/search.php">Search for a post</a>
-        <a href="<?php echo $baseURL; ?>/index.php">Add a new post</a>
+        <a href="<?php echo $baseURL; ?>view_posts.php">View all posts</a>
+        <a href="<?php echo $baseURL; ?>search.php">Search for a post</a>
+        <a href="<?php echo $baseURL; ?>index.php">Add a new post</a>
     </nav>
 
     <section>

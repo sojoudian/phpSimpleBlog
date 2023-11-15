@@ -48,9 +48,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <?php echo '<br>'; ?>
-        <a href="<?php echo $baseURL; ?>/list_edit_posts.php">Edit a posts</a>
-        <a href="<?php echo $baseURL; ?>/view_posts.php">View all posts</a>
-        <a href="<?php echo $baseURL; ?>/index.php">Add a new posts</a>
+        <a href="<?php echo $baseURL; ?>list_edit_posts.php">Edit a posts</a>
+        <a href="<?php echo $baseURL; ?>view_posts.php">View all posts</a>
+        <a href="<?php echo $baseURL; ?>index.php">Add a new posts</a>
     <h1>Search Blog Posts</h1>
     <form method="post">
         <label for="search_field">Search By:</label>
